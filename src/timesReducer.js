@@ -1,15 +1,13 @@
+import { fetchAPI } from "./bookingAPI";
+
 export const updateTimes = (state, action) => {
-  if(action.type === 'add_new_hour'){
-    if(action.date in state){
-      return {...state, [action.date] : [...state[action.date], action.time]}
-    }else{
-      return {...state, [action.date] : [action.time]}
-    }
+ if(action.type === 'date_select'){
+    return fetchAPI(new Date(action.date));
   }
   return state;
 }
 
 export const initializeTimes = () => {
-  const today = new Date().toISOString().substring(0,10)
-  return { [today] : ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']}
+  const today = new Date();
+  return fetchAPI(today);
 }

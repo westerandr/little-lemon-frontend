@@ -1,15 +1,13 @@
 import React from 'react'
 
-export default function BookingForm({date, setDate, time, setTime,  guests, setGuests, occasion, setOccasion, availableTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'], dispatch}) {
-
-  const handleSubmit = function(e){
+export default function BookingForm({date, setDate, time, setTime,  guests, setGuests, occasion, setOccasion, availableTimes, handleSubmit, dispatch}) {
+  const handleForm = (e) => {
     e.preventDefault();
-    console.log(date, time, guests, occasion);
+    handleSubmit({date, time, guests, occasion});
   }
-
   return (
     <section id="booking-form">
-      <form onSubmit={handleSubmit} style={{display: 'grid', maxWidth: '200px', gap: '20px'}}>
+      <form onSubmit={handleForm} style={{display: 'grid', maxWidth: '200px', gap: '20px'}}>
         <label htmlFor="res-date">Choose date</label>
         <input type="date" id="res-date" value={date}
         onChange={(e) => {
@@ -19,7 +17,7 @@ export default function BookingForm({date, setDate, time, setTime,  guests, setG
         <label htmlFor="res-time">Choose time</label>
         <select id="res-time" value={time} onChange={(e) => setTime(e.target.value) }>
             {
-              availableTimes.map((time) => <option key={time}>{time}</option>)
+              availableTimes && availableTimes.map((time) => <option key={time}>{time}</option>)
             }
         </select>
         <label htmlFor="guests">Number of guests</label>

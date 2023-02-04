@@ -462,6 +462,14 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 3rem;
 }
 
+#confirm-booking {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 footer {
   background-color: var(--highlight-color1);
   width: 100%;
@@ -538,10 +546,6 @@ footer img {
   margin: auto;
   align-items: flex-start;
   justify-content: space-evenly;
-}
-/* TABLET */
-@media screen and (min-width: 481px) and (max-width: 950px) {
-
 }
 
 /* MOBILE */

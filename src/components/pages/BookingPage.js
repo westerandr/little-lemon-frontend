@@ -3,7 +3,7 @@ import PageTitle from '../sections/PageTitle'
 import BookingForm from '../sections/BookingForm'
 import restaurantImage from '../../assets/restaurant.jpg'
 
-export default function BookingPage({date, setDate, time, setTime,  guests, setGuests, occasion, setOccasion, dispatch, availableTimes}) {
+export default function BookingPage({date, setDate, time, setTime,  guests, setGuests, occasion, setOccasion, dispatch, handleSubmit, availableTimes}) {
   return (
     <>
       <PageTitle
@@ -20,6 +20,7 @@ export default function BookingPage({date, setDate, time, setTime,  guests, setG
           occasion={occasion}
           setOccasion={setOccasion}
           availableTimes={availableTimes}
+          handleSubmit={handleSubmit}
           dispatch={dispatch} />
     </>
   )
