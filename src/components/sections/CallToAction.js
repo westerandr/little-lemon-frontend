@@ -1,7 +1,7 @@
 import React from 'react'
 import heroImage from '../../assets/restauranfood.jpg'
 
-export default function Hero() {
+export default function CallToAction() {
   return (
     <section id="hero">
       <div id="hero-inner-container">

@@ -3,6 +3,7 @@ import chefImage from '../assets/restaurant chef B.jpg'
 import fbIcon from '../assets/fb-icon.png';
 import twitterIcon from '../assets/twitter-icon.png';
 import igIcon from '../assets/ig-icon.png';
+import { Link } from "react-router-dom";
 
 export default function Footer(){
   return <footer>
@@ -11,12 +12,24 @@ export default function Footer(){
       <nav>
         <ul className='quick-links'>
           <span>Quick Links</span>
-          <li><a href='/'>Home</a></li>
-          <li><a href='#about'>About</a></li>
-          <li><a href='/'>Menu</a></li>
-          <li><a href='/book'>Reservations</a></li>
-          <li><a href='/'>Order Online</a></li>
-          <li><a href='/'>Login</a></li>
+          <Link to="/">
+            Home
+          </Link>
+          <Link to="#about">
+            About
+          </Link>
+          <Link to="/">
+            Menu
+          </Link>
+          <Link to="/booking">
+            Reservations
+          </Link>
+          <Link to="/">
+            Order Online
+          </Link>
+          <Link to="/">
+            Login
+          </Link>
         </ul>
         <ul className='contact'>
           <span>Contact</span>

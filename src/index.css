@@ -146,13 +146,13 @@ h1, h2, h3, h4, h5, h6, p {
   list-style-type: none;
 }
 
-#navbar li a {
+#navbar .menu-link{
   text-decoration: none;
   padding: 1rem;
   color: var(--highlight-color2)
 }
 
-#navbar li a:hover {
+#navbar .menu-link:hover {
   color: var(--secondary-color1);
   transition: color 0.2s ease-in;
 }
@@ -251,7 +251,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .card-outer {
   padding: 1.23rem  1.8rem 1.9rem;
-  height: 200px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -280,6 +280,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: var(--primary-color1);
   font-weight: 400;
   padding-right: 0.5rem;
+  margin: 1rem 0;
 }
 
 .card-header h6 {
@@ -456,8 +457,26 @@ footer nav li a {
   color: var(--highlight-color2);
 }
 
-.quick-links li a:hover{
+.quick-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-links a{
+  text-decoration: none;
+  font-family: var(--karla);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--highlight-color2);
+  margin: 0.3rem 0;
+}
+
+.quick-links a:hover{
   color: var(--secondary-color1);
+}
+
+.quick-links span + a {
+  margin-top: 0.5rem;
 }
 
 .social-media {

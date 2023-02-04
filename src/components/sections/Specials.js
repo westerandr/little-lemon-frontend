@@ -25,7 +25,7 @@ const highlights = [
   },
 ]
 
-export default function Highlights() {
+export default function Specials() {
   return (
     <section id="highlights">
       <div className='highlights-header'>
@@ -33,8 +33,8 @@ export default function Highlights() {
         <button className='btn'>Online Menu</button>
       </div>
       <div className='highlights-body'>
-        { highlights.map((highlight) =>
-            <Card {...highlight} />
+        { highlights.map((highlight, index) =>
+            <Card key={index} {...highlight} />
         ) }
       </div>
     </section>

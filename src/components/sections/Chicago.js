@@ -2,7 +2,7 @@ import React from 'react'
 import aboutOne from '../../assets/Mario and Adrian A.jpg';
 import aboutTwo from '../../assets/Mario and Adrian b.jpg';
 
-export default function About() {
+export default function Chicago() {
   return (
     <section id="about">
       <div className='about-info'>

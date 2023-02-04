@@ -27,13 +27,13 @@ const testimonies = [
   }
   ]
 
-export default function Testimonials() {
+export default function CustomersSay() {
   return (
     <section id="testimonials">
       <h1>Testimonials</h1>
       <div id="testimonials-inner">
-        {testimonies.map((testimony) =>
-          <Testimony {...testimony} />
+        {testimonies.map((testimony, index) =>
+          <Testimony key={index} {...testimony} />
         )}
       </div>
     </section>

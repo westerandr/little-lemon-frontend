@@ -11,11 +11,11 @@ export default function Testimony({ rating, name, image, review}) {
   return (
     <div className='testimony'>
       <div className='rating'>
-        {ratings.map((star) => {
+        {ratings.map((star, index) => {
           if(star){
-            return <StarFilledIcon />
+            return <StarFilledIcon key={index} />
           }else{
-            return <StarOutlineIcon />
+            return <StarOutlineIcon key={index} />
           }
         })}
       </div>
