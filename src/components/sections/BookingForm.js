@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function BookingForm({date, setDate, time, setTime,  guests, setGuests, occasion, setOccasion, availableTimes, dispatch}) {
+export default function BookingForm({date, setDate, time, setTime,  guests, setGuests, occasion, setOccasion, availableTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'], dispatch}) {
 
   const handleSubmit = function(e){
     e.preventDefault();
@@ -29,7 +29,7 @@ export default function BookingForm({date, setDate, time, setTime,  guests, setG
             <option>Birthday</option>
             <option>Anniversary</option>
         </select>
-        <input type="submit" value="Make Your reservation" />
+        <input className='btn' type="submit" value="Make Your reservation" />
       </form>
     </section>
   )
