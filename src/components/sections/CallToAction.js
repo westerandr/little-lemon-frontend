@@ -17,7 +17,7 @@ export default function CallToAction() {
             <h2 className='subtitle text-highlight-color-1'>Chicago</h2>
             <p className='paragraph text-highlight-color-1'>We are a family owned Mediterranean<br /> restaurant, focused on traditional<br /> recipes with a modern twist</p>
           </div>
-          <button onClick={goToBookingPage} className="btn">Reserve a Table</button>
+          <button aria-label="On Click" onClick={goToBookingPage} className="btn">Reserve a Table</button>
         </div>
         <div id="hero-col-2">
           <img src={heroImage} alt="Chef serving entree on platter" />
